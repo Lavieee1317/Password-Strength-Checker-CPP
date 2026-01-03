@@ -1,63 +1,42 @@
-#include <iostream>
-#include <cstring>
-#include <cctype>
-using namespace std;
+# Password Strength Checker (C++)
 
-int main()
-{
-    char password[100];
+## Project Description
+The Password Strength Checker is a console-based C++ application that evaluates the strength of a user-entered password.  
+It checks the password based on commonly used security rules and classifies it as **Weak**, **Medium**, or **Strong**.
 
-    bool hasUpper = false;
-    bool hasLower = false;
-    bool hasDigit = false;
-    bool hasSpecial = false;
+This project demonstrates the use of core C++ concepts and basic cybersecurity principles.
 
-    cout << "Enter your password: ";
-    cin.getline(password, 100);
+## Technologies Used
+- C++
+- Strings
+- Loops
+- Conditional Statements
+- Character Handling Functions
 
-    int length = strlen(password);
 
-    for(int i = 0; i < length; i++) {
-        if(isupper(password[i]))
-            hasUpper = true;
-        else if(islower(password[i]))
-            hasLower = true;
-        else if(isdigit(password[i]))
-            hasDigit = true;
-        else
-            hasSpecial = true;
-    }
+## Features
+- Checks minimum password length  
+- Verifies presence of:
+  - Uppercase letters
+  - Lowercase letters
+  - Digits
+  - Special characters
+- Displays password strength level
 
-    cout << "\n--- Password Analysis ---\n";
+## How to Run the Program
+1. Compile the program using a C++ compiler:
+2. Run the executable:
+3. Enter a password when prompted.
 
-    if(length < 8) {
-        cout << "Password Length: Weak (minimum 8 characters required)\n";
-    } else {
-        cout << "Password Length: OK\n";
-    }
+## Sample Output
 
-    cout << "Uppercase Letter: " << (hasUpper ? "Present" : "Missing") << endl;
-    cout << "Lowercase Letter: " << (hasLower ? "Present" : "Missing") << endl;
-    cout << "Digit: " << (hasDigit ? "Present" : "Missing") << endl;
-    cout << "Special Character: " << (hasSpecial ? "Present" : "Missing") << endl;
+## Concepts Learned
+- String manipulation in C++
+- Use of built-in character functions
+- Logical decision making using conditions
+- Writing clean and readable console programs
 
-    int score = 0;
-    if(length >= 8) score++;
-    if(hasUpper) score++;
-    if(hasLower) score++;
-    if(hasDigit) score++;
-    if(hasSpecial) score++;
 
-    cout << "\nPassword Strength: ";
-
-    if(score <= 2)
-        cout << "WEAK";
-    else if(score == 3 || score == 4)
-        cout << "MEDIUM";
-    else
-        cout << "STRONG";
-
-    cout << endl;
-
-    return 0;
-}
+## Author
+**Lawanya Marathe**  
+B.Tech CSE (AI & ML) – 3rd Year
