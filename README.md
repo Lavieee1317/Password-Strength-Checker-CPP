@@ -29,6 +29,8 @@ This project demonstrates the use of core C++ concepts and basic cybersecurity p
 3. Enter a password when prompted.
 
 ## Sample Output
+![Program Output](Output(Password).png)
+
 
 ## Concepts Learned
 - String manipulation in C++
